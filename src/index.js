@@ -1,10 +1,8 @@
 const { share, switchMap, take, map, repeatWhen, retry } = require('rxjs/operators')
 const { ajax } = require('rxjs/ajax');
 const { from, zip, interval } = require('rxjs');
-console.log('define shtrih widget');
 
 function ShtrihWidget() {
-  console.log('load shtrih widget')
   const self = this, // для доступа к объекту из методов
     system = self.system(), //Данный метод возвращает объект с переменными системы.
     langs = self.langs;  //Объект локализации с данными из файла локализации (папки i18n)
@@ -14,7 +12,6 @@ function ShtrihWidget() {
       users$ = ajax.getJSON(self.get_settings().url).pipe(
         share()
       );
-      console.log('init shtrih widget')
       users$.pipe(
         switchMap(
           users => zip(
