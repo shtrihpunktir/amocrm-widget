@@ -1,0 +1,11 @@
+{
+    "widget": {
+        "name": "Shtrih notifications",
+        "short_description": "Short description",
+        "description": "Full description",
+        "tour_description": "Tour description"
+    },
+    "settings": {
+        "url": "data provider url"
+    }
+}
